@@ -1,0 +1,120 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 1</title>
+        <meta charset="utf-8"/>
+        <link href="drawing.css" rel="stylesheet"/>
+        <script type="text/javascript" src="drawing.js"></script>
+
+    </head>
+
+    <body> 
+
+        <canvas id="MyCanvas" width="960" height="750" class="draw"></canvas>
+        
+        <div  style="float: left">
+            <div id="shape" class="toolbars"> 
+
+                <p>SHAPES</p>
+
+                <div class="inside">
+                    <button class="buttonImg" onclick="drawShape('tri', this);">
+                        <input class="lineBut" type="image" src="image/triangle.png"  style="border-style:none;"/>
+                    </button>
+
+                    <button class="buttonImg"onclick="drawShape('rect',this);">
+                        <input class="lineBut" type="image" src="image/rectangle.png"  style="border-style:none;"/>
+                    </button>
+
+                    <button class="buttonImg" onclick="drawShape('line', this);">
+                        <input class="lineBut" type="image" src="image/line.png"  style="border-style:none;"/>
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="toolbars">
+                <p>Stroke</p>
+                <div class="inside">
+
+                    <table>  
+                        <tr>
+                            <td>Weight</td>
+                            <td>
+                                <select name="stroke" class="strokeSel" size="1" id="item1" onclick="strkWeight(this.value);">
+                                    <option>2</option>
+                                    <option>5</option>
+                                    <option>8</option>
+                                    <option>10</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div id="stroke" class="nothing">
+                        <button class="colorBut" style="background-color: yellow" onclick="strkColor('yellow',this);"></button>
+                        <button class="colorBut" style="background-color: gold " onclick="strkColor('gold',this);" ></button>
+                        <button class="colorBut" style="background-color: orange " onclick="strkColor('orange',this);" ></button>
+                        <button class="colorBut" style="background-color: red " onclick="strkColor('red',this);"></button>
+                        <button class="colorBut" style="background-color: saddlebrown " onclick="strkColor('saddlebrown',this);" ></button>
+                        <button class="colorBut" style="background-color: blue" onclick="strkColor('blue',this);"></button>     
+                        <button class="colorBut" style="background-color: lightskyblue" onclick="strkColor('lightskyblue',this);"></button>   
+                        <button class="colorBut" style="background-color: orchid" onclick="strkColor('orchid',this);"></button>
+                        <button class="colorBut" style="background-color: darkgreen" onclick="strkColor('darkgreen',this);"></button>    
+                        <button class="colorBut" style="background-color: yellowgreen" onclick="strkColor('yellowgreen',this);"></button>
+                        <button class="colorBut" style="background-color: dimgray" onclick="strkColor('dimgray',this);"></button>
+                        <button class="colorBut" style="background-color: black" onclick="strkColor('black',this);"  disabled="true"></button>
+                        <button class="colorBut" style="background-color: white" onclick="strkColor('white',this);"></button>
+                        <button class="colorBut" style="width:auto; background-color: whitesmoke" onclick="strkColor('transparent', this);">Null</button>
+                    </div>
+
+                </div>
+            </div>
+
+            
+            
+            
+            
+            <div class="toolbars">
+                <p>FILL</p>
+                <div class="inside" style="background-color: #00CCFF">
+                    
+                    <div id="fill" class="nothing">
+                        <button class="colorBut" style="background-color: yellow" onclick="fillColor('yellow', this);"></button>
+                        <button class="colorBut" style="background-color: gold " onclick="fillColor('gold', this);" ></button>
+                        <button class="colorBut" style="background-color: orange " onclick="fillColor('orange', this);" ></button>
+                        <button class="colorBut" style="background-color: red " onclick="fillColor('red', this);"></button>
+                        <button class="colorBut" style="background-color: saddlebrown " onclick="fillColor('saddlebrown', this);" ></button>
+                        <button class="colorBut" style="background-color: blue" onclick="fillColor('blue', this);"></button>     
+                        <button class="colorBut" style="background-color: lightskyblue" onclick="fillColor('lightskyblue', this);"></button>   
+                        <button class="colorBut" style="background-color: orchid" onclick="fillColor('orchid', this);"></button>
+                        <button class="colorBut" style="background-color: darkgreen" onclick="fillColor('darkgreen', this);"></button>    
+                        <button class="colorBut" style="background-color: yellowgreen" onclick="fillColor('yellowgreen', this);"></button>
+                        <button class="colorBut" style="background-color: dimgray" onclick="fillColor('dimgray', this);"></button>
+                        <button class="colorBut" style="background-color: black" onclick="fillColor('black', this);"></button>
+                        <button class="colorBut" style="background-color: white" onclick="fillColor('white', this);"></button>
+                        <button class="colorBut" style="width:auto; background-color: whitesmoke" onclick="fillColor('transparent', this);" disabled="true">Null</button>
+                    </div>
+
+                 </div>
+            </div>
+            
+            <a href="note.txt" style="float: left; clear: left">Description About the Web site</a>
+                
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

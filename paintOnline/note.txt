@@ -1,0 +1,103 @@
+How to use the canvas:
+
+	Note :
+		1. You choose an already drawn object by clicking on it
+		1. By choosing the object you can do almost all the functionality as stated below
+		2. To de-select the object, just double-click the mouse anywhere is canvas
+		3. You must de-select an object before choosing another different object/ to draw new image
+		4. If any of the keyboard functions is not working, just click  mouse one-time in canvas to set the focus back to canvas back, then try it again (it will work).
+		5. The default color is black for line and transparent for fill.
+                6. To TA : canvas is the first element in body. If you want to resize it, it is easy to spot. 
+
+	To draw:
+		1. Select the shape from shape toolbar on the right side
+		2. Click and drag in canvas to produce the shape
+	To resize:
+		1. If you haven't choosen any object, just on the object to choose the object
+		2. Click and drag the vertex to change the size of the object
+	To move:
+		1. Choose the object or continue with already choose object
+		2. Click and drag the object
+
+	To copy/paste:
+		1. Choose any object
+		2. press c in your keyboard to copy
+		3. press v in your keyboard to paste
+
+	To delete
+		1. Choose any object
+		2. Press delete
+
+	You can change the color:-
+		before drawing
+			1. By choosing color from right before you start drawing
+		after drawing
+			1. Choose an object if you haven't done so.	
+			2. Click on the colors you want to change.
+	
+
+		
+
+Data- Structure
+	myLines = an array of lines,triangle and rectangle
+	myLines will have all the shapes that's on canvas
+	used to recreate the canvas. 
+
+User-defined object
+	1. Line (inital point, final point, stroke color, stroke weight) 
+		-to keep track of each line 
+	2. Triangle point1, point2, point3, stroke color, stroke weight, fill color)
+		-to keep track of each triangle
+	3. Rectangle (inital point, final point, stroke color, stroke weight, fill color)
+		-to keep track of each rectangle
+	All above have same methods, all of them have :-
+		-> inLine
+			* to check whether mouse position is insidethe shape or not
+			* set distance between mouse position and initial point
+		-> highlight
+			* highlights the object (elaborated below)
+		-> resize
+			* relocate the selected vertex to mouse pointer
+		-> move
+			*move the object to mouse position and draw the object based on  distance it set in inLine
+		-> redraw
+			*draw the object
+		-> createCopy
+			*create and return a copy of the same object
+
+
+
+	4. Circle(x,y)
+		- to keep track all vertecies of choosen shape
+		Method
+			-> choose
+				*to check whether the mouse is on circle or not
+	
+
+
+
+Main idea how the canvas works:
+	COLOR, WEIGHT
+	*Trigger onClick event and pass the value to the function, and function will change the global values.
+	
+	NEW SHAPE
+	*When we chose a shape, it will change the global shape variable to the selected shape
+	*Then we create the new appropriate shape class based on the global shape variable
+	*The newly created shape will have area and length = 0
+	* As we drag mouse from initial click, the object resize the new object accourding mouse position 
+	*After we're done drawing the shape will be pushed into myLines array where it stores all the shape classes
+	*While we resizing the the newly created object, in background we're repainting the whole canvas based on shapes in the myLines array
+
+	EXISTING SHAPE
+	*We go through the myLines array, if the mouse position is inside any of the shape, we highlight the shape
+	*when we're highlighting we store the coordinates of the shape's vertices and take the shape out from myLines (we will push it back once alteration is done).
+	* After selecting the object, user have several option, 
+		1. Move
+		     - Track the mouse position, and redraw the shape at mouse's position
+		2. Resize
+		     - Check if the user pressed on vertex, the move that vertex to mouse position
+		3. Copy/Paste
+		     - Create new copy of the shape and push it into myLines
+		4. Del
+		     - make the selected object to null and not pushing it back to myLines
+

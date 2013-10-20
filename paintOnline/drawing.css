@@ -1,0 +1,129 @@
+/* 
+    Document   : drawing
+    Created on : Sep 21, 2013, 1:32:29 PM
+    Author     : Thurairaj
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+.draw{
+    float: left;
+    border : 1px solid #d3d3d3;
+}
+
+.toolbars {
+    clear:left;    
+    float:left;
+    padding-top: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px 10px 5px 5px;
+    margin-left: 10px;
+    margin-right: 10px; 
+    margin-bottom: 10px;
+    background-color: rgb(1,20,89);  
+    width: 160px;
+    height: 170px;
+
+}
+
+.toolbars p{
+    margin : 0px;
+    margin-left: 15px;
+    padding:0;
+    font-family: Georgia;
+    font-size: 14px;
+    font-weight: bolder;
+    color: white;
+    font-stretch: semi-expanded;
+}
+
+.nothing{
+    
+    margin: 0;
+    padding: 0;
+    background-color:transparent;
+    height:auto;
+    width:auto;
+}
+
+.inside{
+
+    margin-top: 5px;
+    padding: 10px;
+    padding-bottom: 15px;
+    background-color: #00CCFF;
+    height: 120px;
+
+}
+
+.buttonImg{
+    padding: 10px;
+    margin: 5px;
+    margin-bottom: 10px;
+    background-color: rgb(16, 127, 201);
+    border-radius: 5px 5px 5px 5px;
+    border-style: none;
+}
+
+.buttonImg:hover{
+    background-color: rgb(190,226,250);
+}
+
+.buttonImg:active{
+    border-bottom-color: white;
+    background-color: white;
+}
+
+.buttonImg:disabled{
+    border-bottom-color: white;
+    background-color: white;
+}
+
+.strokeSel{
+    
+    width: 80px;
+    margin-left: 3px;
+}
+
+.colorBut{
+    float: left;
+    height:20px;
+    margin :3px;
+    width:20px;
+    border-width: 1px;
+    border-color: lightblue;
+}
+
+.colorBut:disabled{
+    
+    border-width: 3px;
+    border-color:inactiveborder;    
+ 
+    
+}
+
+
+.imageIn{
+    border-style: none;
+
+    display: block;
+    clear: left;
+    height: 20px;
+    width: 20px;
+}
+
+
+
+.lineBut{
+    display: block;
+    clear: left;
+    height: 30px;
+    width: 30px;
+}
+
+
